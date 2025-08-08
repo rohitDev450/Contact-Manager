@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  frontend:
+    build: ./frontend
+    image: rohitar/contact-manager-frontend:${DOCKER_TAG}
+    ports:
+      - "3000:3000"
+
+  backend:
+    build: ./backend
+    image: rohitar/contact-manager-backend:${DOCKER_TAG}
+    ports:
+      - "5000:5000"
